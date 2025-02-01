@@ -4,6 +4,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.css">
+   <script  src="js/main.js" defer></script>
+
    <title>calc</title>
 </head>
 <body>
@@ -14,22 +16,21 @@
             Калькулятор
          </h1>
          <div class="input">
-            <input type="text" class="input_1" id="input1" placeholder="10">
-            <input type="text" class="input_2" id="input2" placeholder="5">
+            <input type="text" class="input_1" id="input1" placeholder="Number" value="10">
+            <input type="text" class="input_2" id="input2" placeholder="Number" value="5">
          </div>
          
          <div class="btn">
-            <button class="button_sum" type="reset" id="sum">+</button>
-            <button class="button_min" type="reset" id="min">-</button>
+            <button class="button_sum" type="submit" id="sum">+</button>
+            <button class="button_min" type="submit" id="min">-</button>
          </div>
-         <button class="result" type="submit">Порахувати</button>
+         <button class="result" type="submit" id="submit">Порахувати</button>
          <div class="content">
             <h3 class="titel_result">Результат:</h3>
-            <p class="text" id="result">49</p>
+            <p class="text" id="result">15</p>
          </div>
 
       </div>
    </header>
-   
 </body>
 </html>
