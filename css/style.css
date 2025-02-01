@@ -7,6 +7,8 @@ button{
 }
 
 
+
+
 .container{
    background-color: rgb(109, 101, 147);
    height: 100vh;
@@ -19,6 +21,7 @@ button{
 .title{
    margin-bottom: 20px;
    border-bottom: 2px solid #0e0d0d;
+   font-weight: 700;
 }
 .input_1,
 .input_2,
@@ -44,13 +47,30 @@ button{
 
 }
 .button_sum,
-.button_min{
+.button_min,
+.button_mnog,
+.button_del
+   {
    padding: 7px 100px;
    border-radius: 10px;
    border: none;
    font-size: 32px;
 }
 
+.button_del{
+   background-color: rgb(66, 31, 240);
+}
+
+.button_del:hover{
+   background-color: rgb(31, 160, 240) ;
+  }
+
+.button_mnog{
+   background-color: rgb(218, 130, 24);
+}
+.button_mnog:hover{
+   background-color: rgb(232, 178, 16) ;
+}
 .input_1::placeholder,
 .input_2::placeholder 
    {
@@ -64,14 +84,19 @@ button{
 }
 
 .button_sum {
-   background-color: rgb(27, 152, 48);
-   font-size: 32px;
+   background-color: rgb(6, 225, 42);
+}
 
+.button_sum:hover{
+ background-color: rgb(18, 114, 34); ;
 }
 
 .button_min {
-   background-color: rgb(222, 39, 60); 
-   
+   background-color: rgb(255, 36, 7);  
+}
+
+.button_min:hover {
+   background-color: rgb(194, 34, 53);  
 }
 
 .result{
@@ -92,6 +117,6 @@ button{
    background-color: aliceblue;
    padding: 10px 220px;
    border-radius: 10px;
-   font-size: 40px;
+   font-size: 20px;
 
 }

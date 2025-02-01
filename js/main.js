@@ -5,6 +5,8 @@ const input2 =document.getElementById('input2')
 const submitBtn =document.getElementById('submit')
 const plusBtn = document.getElementById('sum')
 const minusBtn = document.getElementById('min')
+const mnogBtn = document.getElementById('mnog')
+const delBtn = document.getElementById('del')
 
 let action = '+'
 
@@ -14,6 +16,12 @@ plusBtn.onclick = function(){
 }
 minusBtn.onclick = function(){
    action = '-'
+}
+mnogBtn.onclick = function(){
+   action = '*'
+}
+delBtn.onclick = function(){
+   action = '/'
 }
 
 function printResult(result){
@@ -25,15 +33,32 @@ function printResult(result){
    resultElement.textContent = result
 }
 
+function computeNumbersWithAction(inp1, inp2, actionSymbol){
+   const num1 = Number(inp1.value)
+   const num2 = Number(inp2.value)
+   if(actionSymbol == '-'){
+      return num1 - num2
+   }else if(actionSymbol == '+'){
+      return num1 + num2
+   }else if(actionSymbol == '*'){
+      return num1 * num2
+   }else {
+      return num1 / num2
+   }
+}
+
 submitBtn.onclick = function(){
 
-   if(action == '+'){
-      const sum = Number(input1.value) + Number(input2.value)
-      printResult(sum)
-   }else{
-      const sum = Number(input1.value) - Number(input2.value)
-      printResult(sum)
-   }
+   const result = computeNumbersWithAction(input1, input2, action)
+   printResult(result)
+
+   // if(action == '+'){
+   //    const sum = Number(input1.value) + Number(input2.value)
+   //    printResult(sum)
+   // }else{
+   //    const sum = Number(input1.value) - Number(input2.value)
+   //    printResult(sum)
+   // }
    
 }
 
